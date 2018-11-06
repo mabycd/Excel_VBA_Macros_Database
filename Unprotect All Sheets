@@ -1,0 +1,22 @@
+Sub UnProtect_All_Sheets()
+
+' for tab collections & IF
+
+    Dim Sh As Worksheet
+    
+   ' Dim ShActive As Worksheet
+   
+    Application.ScreenUpdating = False
+    
+   'Set ShActive = ActiveSheet
+   
+    For Each Sh In ThisWorkbook.Worksheets
+        Sh.Unprotect Password:="test"
+        
+    Next Sh
+    
+   ' ShActive.Select
+   
+    Application.ScreenUpdating = True
+    
+End Sub
