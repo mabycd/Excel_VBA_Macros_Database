@@ -1,0 +1,13 @@
+Sub Protect_All_Sheets()
+
+' for tab collections
+
+    Dim Sh As Worksheet
+    For Each Sh In ThisWorkbook.Worksheets
+        Sh.Protect "test", , , , , True, True, True
+    Next Sh
+    
+    'Note: if you use protection, you might want to lock your VBA code so others can't see the password
+    ' You can do this by going to Tools -> VBAProject Properties -> Protection -> Provide a password
+    
+End Sub
